@@ -40,7 +40,13 @@ function postData() {
 var name = document.getElementById("name").value;
 var age = document.getElementById("age").value;
 var city = document.getElementById("city").value;
+console.log(name);
+console.log(age);
+console.log(city);
+
 data = {name: name, age: age, city: city};
+console.log(data);
+
 fetch(api_url, {
 method: "POST",
 headers: {
@@ -76,6 +82,7 @@ window.location.href = "index.html";
 })
 }
 function deleteData(id) {
+    alert(`_id value : ${id}`)
 user_input = confirm("Are you sure you want to delete this record?");
 if(user_input) {
 fetch(api_url, {
